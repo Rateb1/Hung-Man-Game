@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>The Hung Man Game</h1>
+    <p>In This Game You Should Guess The Letter If You Click The Wrong Letter You Will Die</p>
+   
+    <!-- game-container and svg -->
+    <div class="game-container">
+        <svg width="400" hight="300" class="game-ground">
+            <!-- Road -->
+            <line x1="60" y1="60" x2="180" y2="60"   />
+            <line x1="180" y1="60" x2="180" y2="110" />
+            <line x1="60" y1="60" x2="60" y2="300" />
+            <line x1="30" y1="300" x2="90" y2="300" />
+
+            <!-- Head -->
+            <circle cy="130" cx="180"  r="20" class="figure-part" />
+
+            <!-- Body -->
+            <line x1="180" y1="150" x2="180" y2="235" class="figure-part" />
+
+            <!-- Hands -->
+            <line x1="180" y1="180" x2="140" y2="130" class="figure-part" />
+            <line x1="180" y1="180" x2="215" y2="135" class="figure-part" />
+
+            <!-- Foots -->
+            <line x1="180" y1="230" x2="150" y2="270" class="figure-part" />
+            <line x1="180" y1="230" x2="200" y2="270" class="figure-part" />
+
+        </svg>
+
+        <!-- Wrong Letter -->
+        <div class="wrong-letter-container" id="wrong-letter-container">
+            <div class="wrong" id="wrong">
+                <!-- <p>wrong</p> -->
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Word and Letter -->
+         <div class="word-letter-container" id="word-letter-container">
+            
+        </div>
+    </div>
+
+     <!-- Modal -->
+        <div class="modal-container" id="modal">
+            <div class="modal">
+                <h2 id="final-message">You Have won</h2>
+                <button id="play-Again"><a href="index.html">Play Again </a></button>
+            </div>
+        </div>
+
+    <!-- Notification -->
+        <div class="notification-container" id="notification-container">
+            <p>You Have Already Enter This letter</p>
+        </div>
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>

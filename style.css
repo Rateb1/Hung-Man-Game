@@ -1,0 +1,121 @@
+:root{
+    --background-color: #6D1AC9;
+    --some-colors: #4afc50;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+a{
+    color: inherit;
+}
+body{
+    background-color: var(--background-color);
+    color: #fff;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+.game-ground{
+    position: fixed;
+    top: 17%;
+    right: 39%;
+    fill: transparent;
+    stroke-width: 7px;
+    stroke: black;
+    stroke-linecap: round;
+    height: 45%;
+}
+.game-container{
+    padding: 20px 30px;
+    position: relative;
+    height: 550px;
+    width: 450px;
+}
+.figure-part{
+    display: none;
+}
+h1{
+    margin: 20px 0 0 ;
+}
+.game-container .wrong-letter-container{
+    position: absolute;
+    top: 50px;
+    right: 3px;
+    text-align:right;
+    font-size: x-large;
+    font-weight: 900;
+}
+.game-container .wrong-letter-container span{
+    font-size: 20px;
+    font-weight: 900;
+}
+.game-container .word-letter-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+}
+.game-container .word-letter-container .letter{
+    border-bottom: 2px solid var(--some-colors);
+    padding: 10px;
+    margin: 0 5px;
+    font-size: 18px;
+    font-weight: 900;
+}
+.modal-container{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    background-color: var(--some-colors);
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 10px 13px 3px rgba(0, 0 , 0, 0.3);
+    color: var(--background-color);
+}
+.modal button{
+    padding: 10px 15px;
+    background-color: var(--background-color);
+    color: var(--some-colors);
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 16px;
+    border: none;
+    border-radius: 5px;
+}
+.modal button:active{
+    transform: scale(0.98);
+}
+.modal button:focus{
+    outline: none;
+}
+.notification-container{
+    background-color: rgba(0, 0 , 0, 0.3);
+    padding: 10px 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: fixed;
+    bottom: -50px;
+    transition: 0.5s transform ease-in-out;
+}
+.notification-container.show{
+    transform: translateY(-50px);
+}
